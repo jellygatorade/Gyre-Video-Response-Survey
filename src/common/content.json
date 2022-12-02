@@ -1,0 +1,36 @@
+{
+  "en": {
+    "general": {
+      "toggle_lang_btn": "Español",
+      "timeout": {
+        "question": "Are you still viewing?",
+        "instruction": "Tap anywhere to continue."
+      }
+    },
+    "attract": {
+      "heading": "Beyond White: Marble Sculpture and Color",
+      "touch_to_begin": "TOUCH TO BEGIN | TOCAR PARA COMENZAR"
+    },
+    "main": {
+      "heading": "Beyond White: Marble Sculpture and Color",
+      "body": "This fragment of marble was once part of a tub-shaped sarcophagus, carved with rams and a tree at the rounded ends. Such sarcophagi were used for human burials throughout the Roman Empire from the second century onward. This fragment cannot tell us about the individual who was buried in it; however, it tells us a little bit about the use of color on white marble sculpture."
+    }
+  },
+  "es": {
+    "general": {
+      "toggle_lang_btn": "English",
+      "timeout": {
+        "question": "!¿Todavía estás viendo?",
+        "instruction": "!Toque en cualquier lugar para continuar."
+      }
+    },
+    "attract": {
+      "heading": "!Más allá del blanco: escultura de mármol y color",
+      "touch_to_begin": "TOUCH TO BEGIN | TOCAR PARA COMENZAR"
+    },
+    "main": {
+      "heading": "!Más allá del blanco: escultura de mármol y color",
+      "body": "!Este fragmento de mármol fue una vez parte de un sarcófago en forma de tina, tallado con carneros y un árbol en los extremos redondeados. Dichos sarcófagos se utilizaron para entierros humanos en todo el Imperio Romano desde el siglo II en adelante. Este fragmento no puede decirnos sobre el individuo que fue enterrado en él; sin embargo, nos habla un poco sobre el uso del color en la escultura de mármol blanco."
+    }
+  }
+}

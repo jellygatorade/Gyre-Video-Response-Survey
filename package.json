@@ -1,0 +1,16 @@
+{
+  "name": "kehinde-response",
+  "version": "1.0.0",
+  "description": "Based from Electron quick start tutorial last followed 4-6-2022",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron --inspect=5858 .",
+    "package-win": "electron-packager . kehinde-response --overwrite --asar=false --platform=win32 --arch=ia32 --icon=src/common/assets/icons/ncma-icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Kehinde Wiley Response\""
+  },
+  "author": "Kevin Kane",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^18.0.2"
+  }
+}

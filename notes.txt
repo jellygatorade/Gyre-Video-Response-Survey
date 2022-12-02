@@ -1,0 +1,11 @@
+Tailwind
+
+npx tailwindcss -i ./src/common/style/tailwind-input.css -o ./src/common/style/tailwind-compiled.css --watch
+
+
+---
+
+Electron
+
+npm start
+npm run package-win
