@@ -10,6 +10,9 @@ import {
   removeIdleTimerTier1,
   setupIdleTimerTier1,
 } from "./idle-timer-tier-1-background.js";
+import { attractViewInitFns } from "./attract-view.js";
+import { introView } from "./intro-view.js";
+import { mainVideoView } from "./main-video-view.js";
 
 import { domVars } from "./global-vars-dom.js";
 import {
@@ -33,6 +36,13 @@ window.addEventListener("load", () => {
 
   // Apply the language specified in current "langState"
   applyLanguage(lang.langState);
+
+  /******************************
+   * Initialize Views
+   ******************************/
+  attractViewInitFns();
+  introView.init();
+  mainVideoView.init();
 
   /******************************
    * Timeout timer

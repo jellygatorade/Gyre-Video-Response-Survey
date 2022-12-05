@@ -1,4 +1,5 @@
 {
+  "attract_video_path": "./common/assets/video/AfricanVoices_HomeVideo.mp4",
   "en": {
     "general": {
       "toggle_lang_btn": "Español",
@@ -8,15 +9,28 @@
       }
     },
     "attract": {
-      "heading": "Beyond White: Marble Sculpture and Color",
+      "heading": "Discovering <i>Judith and Holofernes</i>",
       "touch_to_begin": "TOUCH TO BEGIN | TOCAR PARA COMENZAR"
     },
-    "main": {
-      "heading": "Beyond White: Marble Sculpture and Color",
-      "body": "This fragment of marble was once part of a tub-shaped sarcophagus, carved with rams and a tree at the rounded ends. Such sarcophagi were used for human burials throughout the Roman Empire from the second century onward. This fragment cannot tell us about the individual who was buried in it; however, it tells us a little bit about the use of color on white marble sculpture."
+    "intro": {
+      "text1": "Let's discover more about <i>Judith and Holofernes</i>, created by Kehinde Wiley. This painting is considered one of the most challenging works in the NCMA’s collection.",
+      "text2": "Many people judge the painting immediately without taking time to understand the story behind it. In this video you’ll get the background on this work of art and hear about the biblical story that inspired it.",
+      "text3": "You’ll also hear from a tour guide at the NCMA and her response to how she thinks the artist has directly addressed in this painting ongoing issues of inequality, power, and oppression.",
+      "skip_intro": "Skip Intro"
+    },
+    "main_video": {
+      "main_video_path": "./common/assets/video/Concert.mp4",
+      "return_home": "[Back to main]"
+    },
+    "form": {
+      "response_intro": "Now that you have listened to various stories and viewpoints about the painting, consider how your perspective may have shifted.",
+      "response_question": "Interpretation of a work of art can change over time and is often impacted by the viewer’s personal experiences and current events. What is your response to this painting today?",
+      "words_remaining": "Words remaining:",
+      "submit": "Submit"
     }
   },
   "es": {
+    "is_available": true,
     "general": {
       "toggle_lang_btn": "English",
       "timeout": {
@@ -25,12 +39,24 @@
       }
     },
     "attract": {
-      "heading": "!Más allá del blanco: escultura de mármol y color",
+      "heading": "!Descubriendo <i>Judit y Holofernes</i>",
       "touch_to_begin": "TOUCH TO BEGIN | TOCAR PARA COMENZAR"
     },
-    "main": {
-      "heading": "!Más allá del blanco: escultura de mármol y color",
-      "body": "!Este fragmento de mármol fue una vez parte de un sarcófago en forma de tina, tallado con carneros y un árbol en los extremos redondeados. Dichos sarcófagos se utilizaron para entierros humanos en todo el Imperio Romano desde el siglo II en adelante. Este fragmento no puede decirnos sobre el individuo que fue enterrado en él; sin embargo, nos habla un poco sobre el uso del color en la escultura de mármol blanco."
+    "intro": {
+      "text1": "!Descubramos más sobre <i>Judith y Holofernes</i>, creado por Kehinde Wiley. Esta pintura se considera una de las obras más desafiantes de la colección de la NCMA.",
+      "text2": "!Mucha gente juzga la pintura inmediatamente sin tomarse el tiempo de entender la historia detrás de ella. En este video, conocerá los antecedentes de esta obra de arte y escuchará la historia bíblica que la inspiró.",
+      "text3": "!También escuchará a un guía turístico en la NCMA y su respuesta sobre cómo cree que el artista ha abordado directamente en esta pintura los problemas actuales de desigualdad, poder y opresión.",
+      "skip_intro": "!Presiona Intro"
+    },
+    "main_video": {
+      "main_video_path": "./common/assets/video/Silver.mp4",
+      "return_home": "![Volver]"
+    },
+    "form": {
+      "response_intro": "!Ahora que ha escuchado varias historias y puntos de vista sobre la pintura, considere cómo puede haber cambiado su perspectiva.",
+      "response_question": "!La interpretación de una obra de arte puede cambiar con el tiempo y, a menudo, se ve afectada por las experiencias personales y los eventos actuales del espectador. ¿Cuál es su respuesta a esta pintura hoy?",
+      "words_remaining": "!Palabras restantes:",
+      "submit": "!Enviar"
     }
   }
 }

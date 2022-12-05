@@ -5,6 +5,7 @@ module.exports = {
       CaseLight: ["Case-Light"],
       CaseMedium: ["Case-Medium"],
       CaseTextRegular: ["CaseText-Regular"],
+      CaseTextMedium: ["CaseText-Medium"],
       CaseMicroRegular: ["CaseMicro-Regular"],
     },
     colors: {

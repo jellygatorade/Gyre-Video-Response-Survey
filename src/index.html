@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="w-full h-full">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -16,7 +16,7 @@
     />
   </head>
 
-  <body class="bg-black text-white p-[2rem] font-CaseTextLight">
+  <body class="w-full h-full bg-black text-white p-[2rem] font-CaseTextLight">
     <!-- Timeout modal -->
     <div
       id="timeout-modal"
@@ -61,18 +61,155 @@
       </div>
     </div>
 
+    <!-- Fade Between Views Overlay -->
+    <div
+      id="fade-between-views-overlay"
+      class="z-[5000] absolute top-0 left-0 h-full w-full bg-black invisible opacity-0 transition-all duration-300"
+    ></div>
+
+    <!-- Attract View -->
+    <div
+      id="attract-view"
+      class="z-[300] absolute top-0 left-0 h-full w-full bg-black visible opacity-100 transition-all duration-300"
+    >
+      <!-- Video player -->
+      <video id="attract-video" class="z-[350] absolute min-h-full"></video>
+
+      <!-- Overlay (for touch detection) -->
+      <div id="attract-overlay" class="z-[500] relative h-full w-full">
+        <!-- Touch to begin - to match Sean's Digital Labels -->
+        <div
+          class="absolute bottom-0 left-0 p-[2.25rem] z-[600] text-xl text-shadow-black-3px"
+        >
+          <h1 class="text-6xl font-CaseTextMedium pb-[0.25rem]">
+            <span lang="en" id="en-attract-title"> Title </span>
+            <span lang="es" id="es-attract-title"> Title </span>
+          </h1>
+          <h2 class="tracking-[0.25rem]">
+            <span lang="en" id="en-attract-touch-to-begin">
+              Touch to begin
+            </span>
+            <span lang="es" id="es-attract-touch-to-begin">
+              Touch to begin
+            </span>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Intro View -->
+    <div
+      id="intro-view"
+      class="h-full z-[200] relative top-0 left-0 invisible opacity-0 transition-all duration-300"
+    >
+      <div class="w-full h-full flex flex-row justify-center">
+        <div class="w-[800px] flex flex-col justify-center items-center">
+          <p
+            id="intro-text-1"
+            class="visible opacity-100 transition-all duration-300"
+          >
+            <span lang="en" id="en-intro-text-1">En Intro Text 1</span>
+            <span lang="es" id="es-intro-text-1">Es Intro Text 1</span>
+          </p>
+          <p
+            id="intro-text-2"
+            class="invisible opacity-0 transition-all duration-300"
+          >
+            <span lang="en" id="en-intro-text-2">En Intro Text 2</span>
+            <span lang="es" id="es-intro-text-2">Es Intro Text 2</span>
+          </p>
+          <p
+            id="intro-text-3"
+            class="invisible opacity-0 transition-all duration-300"
+          >
+            <span lang="en" id="en-intro-text-3">En Intro Text 3</span>
+            <span lang="es" id="es-intro-text-3">Es Intro Text 3</span>
+          </p>
+        </div>
+      </div>
+      <button
+        id="skip-intro-button"
+        class="absolute bottom-0 right-0 border border-white rounded-full px-[0.875rem] py-[0.25rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+      >
+        <span lang="en" id="en-skip-intro-button">En Skip Intro</span>
+        <span lang="es" id="es-skip-intro-button">Es Skip Intro</span>
+      </button>
+    </div>
+
+    <!-- Main Video View -->
+    <div
+      id="main-video-view"
+      class="z-[100] bg-black absolute top-0 left-0 h-full w-full invisible opacity-0 transition-all duration-300"
+    >
+      <button
+        type="button"
+        id="main-video-view-return-home-btn"
+        class="z-[300] absolute top-[40px] right-[40px] font-CaseTextLight italic tracking-wide text-shadow-black-3px hover:text-orange-ncma transition-all duration-300"
+      >
+        <span lang="en" id="en-main-video-return-home-btn-txt"></span>
+        <span lang="es" id="es-main-video-return-home-btn-txt"></span>
+      </button>
+      <!-- <div
+        id="video-player-controls"
+        class="z-[290] relative h-full text-white transition-all duration-300 opacity-100 visible"
+      >
+        <button
+          type="button"
+          id="video-player-return-home-btn"
+          class="absolute top-[40px] right-[40px] font-CaseTextLight italic tracking-wide text-shadow-black-3px hover:text-orange-ncma transition-all duration-300"
+        >
+          <span lang="en" id="en-video-player-return-home-btn-txt"></span>
+          <span lang="es" id="es-video-player-return-home-btn-txt"></span>
+        </button>
+        <div
+          id="video-player-playback-controls"
+          class="absolute bottom-0 w-full flex flex-row justify-center align-center"
+        >
+          <button
+            type="button"
+            id="video-player-play-pause-btn"
+            class="m-[20px] text-shadow-black-3px hover:text-orange-ncma transition-all duration-300"
+          >
+            <i
+              id="video-player-play-pause-btn-icon"
+              class="fas fa-play text-[48px]"
+            >
+            </i>
+          </button>
+          <input type="range" id="video-player-seek-bar" value="0" step="any" />
+        </div>
+      </div> -->
+      <video
+        id="main-video"
+        class="z-[250] absolute top-0 left-0 min-h-full min-w-full"
+      >
+        <!-- src property to be replaced by js -->
+        <source id="main-video-source" src="" type="video/mp4" />
+      </video>
+    </div>
+
     <!-- Form + Virtual Keyboard view -->
-    <div id="form-keyboard-view">
+    <div
+      id="form-keyboard-view"
+      class="z-[200] absolute top-0 left-0 h-full w-full invisible opacity-0 transition-all duration-300"
+    >
       <div class="w-full flex flex-row justify-center">
         <div class="w-[1440px] max-w-[1440px]">
           <p class="mb-[1rem]">
-            Now that you have listened to various stories and viewpoints about
-            the painting, consider how your perspective may have shifted.
+            <span lang="en" id="en-form-response-intro">
+              En Response Intro
+            </span>
+            <span lang="es" id="es-form-response-intro">
+              Es Response Intro
+            </span>
           </p>
           <p class="my-[1rem]">
-            Interpretation of a work of art can change over time and is often
-            impacted by the viewer’s personal experiences and current events.
-            What is your response to this painting today?
+            <span lang="en" id="en-form-response-question">
+              En Response Question
+            </span>
+            <span lang="es" id="es-form-response-question">
+              Es Response Question
+            </span>
           </p>
 
           <!-- maxlength="20" -->
@@ -84,14 +221,23 @@
               name="kehinde_response"
               type="text"
             ></textarea>
-            <p>Words remaining: <span id="textarea-words-remaining"></span></p>
+            <p>
+              <span lang="en" id="en-form-words-remaining"
+                >En Words remaining</span
+              >
+              <span lang="es" id="es-form-words-remaining"
+                >Es Words remaining</span
+              >
+              <span id="textarea-words-remaining"></span>
+            </p>
 
             <button
               id="response-form-submit-button"
               type="submit"
               class="border border-white rounded-full px-[0.875rem] py-[0.25rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
             >
-              Submit
+              <span lang="en" id="en-form-submit">En Submit</span>
+              <span lang="es" id="es-form-submit">Es Submit</span>
             </button>
           </form>
 
