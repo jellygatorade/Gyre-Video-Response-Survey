@@ -13,6 +13,7 @@
 # From github/gitignore/Node.gitignore 
 # https://github.com/github/gitignore/blob/main/Node.gitignore
 
+/src/common/assets/fa
 /src/common/assets/font
 /src/common/assets/icons
 /src/common/assets/images

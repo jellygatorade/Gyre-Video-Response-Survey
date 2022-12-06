@@ -1,15 +1,11 @@
 import { callFetchCreateUI } from "./fetch.js";
-import {
-  languageSwitcherInit,
-  applyLanguage,
-  setLanguage,
-  lang,
-} from "./language-switcher.js";
+import { languageSwitcher } from "./language-switcher.js";
 import { timeoutModalInitFns } from "./idle-timer-tier-2-timeout-modal.js";
 import {
   removeIdleTimerTier1,
   setupIdleTimerTier1,
 } from "./idle-timer-tier-1-background.js";
+import { interactionEvents } from "./interaction-events.js";
 import { attractViewInitFns } from "./attract-view.js";
 import { introView } from "./intro-view.js";
 import { mainVideoView } from "./main-video-view.js";
@@ -27,19 +23,20 @@ window.addEventListener("load", () => {
    * UI + Langauge
    ******************************/
   callFetchCreateUI();
-  languageSwitcherInit();
+  languageSwitcher.init();
 
   // Determine if there was a language previously set
   if (localStorage.getItem("langState")) {
-    setLanguage(localStorage.getItem("langState"));
+    languageSwitcher.setLanguage(localStorage.getItem("langState"));
   }
 
   // Apply the language specified in current "langState"
-  applyLanguage(lang.langState);
+  languageSwitcher.applyLanguage(languageSwitcher.lang.langState);
 
   /******************************
    * Initialize Views
    ******************************/
+  interactionEvents.init();
   attractViewInitFns();
   introView.init();
   mainVideoView.init();

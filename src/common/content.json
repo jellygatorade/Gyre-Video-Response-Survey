@@ -13,14 +13,16 @@
       "touch_to_begin": "TOUCH TO BEGIN | TOCAR PARA COMENZAR"
     },
     "intro": {
-      "text1": "Let's discover more about <i>Judith and Holofernes</i>, created by Kehinde Wiley. This painting is considered one of the most challenging works in the NCMA’s collection.",
-      "text2": "Many people judge the painting immediately without taking time to understand the story behind it. In this video you’ll get the background on this work of art and hear about the biblical story that inspired it.",
-      "text3": "You’ll also hear from a tour guide at the NCMA and her response to how she thinks the artist has directly addressed in this painting ongoing issues of inequality, power, and oppression.",
-      "skip_intro": "Skip Intro"
+      "text_array": [
+        "Let's discover more about <i>Judith and Holofernes</i>, created by Kehinde Wiley. This painting is considered one of the most challenging works in the NCMA’s collection.",
+        "Many people judge the painting immediately without taking time to understand the story behind it. In this video you’ll get the background on this work of art and hear about the biblical story that inspired it.",
+        "You’ll also hear from a tour guide at the NCMA and her response to how she thinks the artist has directly addressed in this painting ongoing issues of inequality, power, and oppression."
+      ],
+      "skip_intro": "Skip intro"
     },
     "main_video": {
       "main_video_path": "./common/assets/video/Concert.mp4",
-      "return_home": "[Back to main]"
+      "restart_intro": "Restart from intro"
     },
     "form": {
       "response_intro": "Now that you have listened to various stories and viewpoints about the painting, consider how your perspective may have shifted.",
@@ -43,14 +45,16 @@
       "touch_to_begin": "TOUCH TO BEGIN | TOCAR PARA COMENZAR"
     },
     "intro": {
-      "text1": "!Descubramos más sobre <i>Judith y Holofernes</i>, creado por Kehinde Wiley. Esta pintura se considera una de las obras más desafiantes de la colección de la NCMA.",
-      "text2": "!Mucha gente juzga la pintura inmediatamente sin tomarse el tiempo de entender la historia detrás de ella. En este video, conocerá los antecedentes de esta obra de arte y escuchará la historia bíblica que la inspiró.",
-      "text3": "!También escuchará a un guía turístico en la NCMA y su respuesta sobre cómo cree que el artista ha abordado directamente en esta pintura los problemas actuales de desigualdad, poder y opresión.",
+      "text_array": [
+        "!Descubramos más sobre <i>Judith y Holofernes</i>, creado por Kehinde Wiley. Esta pintura se considera una de las obras más desafiantes de la colección de la NCMA.",
+        "!Mucha gente juzga la pintura inmediatamente sin tomarse el tiempo de entender la historia detrás de ella. En este video, conocerá los antecedentes de esta obra de arte y escuchará la historia bíblica que la inspiró.",
+        "!También escuchará a un guía turístico en la NCMA y su respuesta sobre cómo cree que el artista ha abordado directamente en esta pintura los problemas actuales de desigualdad, poder y opresión."
+      ],
       "skip_intro": "!Presiona Intro"
     },
     "main_video": {
       "main_video_path": "./common/assets/video/Silver.mp4",
-      "return_home": "![Volver]"
+      "restart_intro": "!Reiniciar desde la introducción"
     },
     "form": {
       "response_intro": "!Ahora que ha escuchado varias historias y puntos de vista sobre la pintura, considere cómo puede haber cambiado su perspectiva.",

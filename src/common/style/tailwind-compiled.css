@@ -472,6 +472,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-shadow: 0px 0px 3px #000000;
 }
 
+.box-shadow-black-3px {
+  box-shadow: 0px 0px 3px #000000;
+}
+
 .visible {
   visibility: visible;
 }
@@ -509,16 +513,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }
 
+.bottom-\[2rem\] {
+  bottom: 2rem;
+}
+
+.right-\[2rem\] {
+  right: 2rem;
+}
+
 .top-\[40px\] {
   top: 40px;
 }
 
 .right-\[40px\] {
   right: 40px;
-}
-
-.bottom-\[2rem\] {
-  bottom: 2rem;
 }
 
 .z-\[5000\] {
@@ -606,6 +614,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 60px;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
 .max-h-\[400px\] {
   max-height: 400px;
 }
@@ -626,6 +642,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1440px;
 }
 
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -636,6 +660,33 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[1440px\] {
   max-width: 1440px;
+}
+
+.max-w-\[1280px\] {
+  max-width: 1280px;
+}
+
+.max-w-\[1080px\] {
+  max-width: 1080px;
+}
+
+.max-w-\[1000px\] {
+  max-width: 1000px;
+}
+
+.max-w-\[960px\] {
+  max-width: 960px;
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.resize-none {
+  resize: none;
 }
 
 .resize-y {
@@ -658,12 +709,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-\[0\.5rem\] {
+  gap: 0.5rem;
 }
 
 .overflow-y-auto {
@@ -727,8 +786,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
+.py-\[1rem\] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pb-\[0\.25rem\] {
   padding-bottom: 0.25rem;
+}
+
+.pr-\[1rem\] {
+  padding-right: 1rem;
+}
+
+.pr-\[0\.25rem\] {
+  padding-right: 0.25rem;
+}
+
+.pr-\[0\.15rem\] {
+  padding-right: 0.15rem;
+}
+
+.pl-\[0\.15rem\] {
+  padding-left: 0.15rem;
+}
+
+.pt-\[4rem\] {
+  padding-top: 4rem;
 }
 
 .text-center {
@@ -760,6 +844,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[48px\] {
   font-size: 48px;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .italic {
@@ -826,6 +925,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
 }
 
 @font-face {

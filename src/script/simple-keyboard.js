@@ -152,7 +152,7 @@ function simpleKeyboardInit() {
 
   function setStyle() {
     // Modify css for the keyboard element, rows direct parent
-    domVars.simpleKeyboard.classList.add("max-w-[1440px]");
+    domVars.simpleKeyboard.classList.add("max-w-[960px]");
 
     // Modify css for the individual key buttons
     // Height can be adjusted by assigning height to each individual key, default is 40px in .hg-theme-default .hg-button

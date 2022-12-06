@@ -2,12 +2,15 @@ import { domVars } from "./global-vars-dom.js";
 import { fadeIn, fadeOut } from "../common/script/fade-in-out-elements.js";
 import { fadeBetweenViews } from "./fade-between-views.js";
 import { setupIdleTimerTier1 } from "./idle-timer-tier-1-background.js";
+import { introView } from "./intro-view.js";
 
 function removeAttractView() {
   // Proceed to intro view
   fadeBetweenViews(domVars.attractView, domVars.introView);
+  //fadeBetweenViews(domVars.attractView, domVars.formView);
 
   // Start the three paragraph slideshow from intro view
+  introView.playIntro();
 
   setTimeout(() => {
     // Pause the attract video
@@ -18,7 +21,7 @@ function removeAttractView() {
   }, 300);
 
   // Start the idle timer
-  setupIdleTimerTier1();
+  //setupIdleTimerTier1();
 }
 
 function attractViewInitFns() {

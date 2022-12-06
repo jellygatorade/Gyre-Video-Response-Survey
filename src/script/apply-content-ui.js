@@ -1,10 +1,12 @@
 import { domVars } from "./global-vars-dom.js";
+import { introView } from "./intro-view.js";
 
 function applyContent(data) {
   // Spanish availability
   // Set domVars.toggleLangButton to "display: none;" if not available
   if (!data.es.is_available) {
-    domVars.toggleLangButton.classList.add("hidden");
+    domVars.introToggleLangButton.classList.add("hidden");
+    domVars.formToggleLangButton.classList.add("hidden");
   }
 
   // Timeout Modal
@@ -22,14 +24,17 @@ function applyContent(data) {
   domVars.esAttractTouchToBegin.innerHTML = data.es.attract.touch_to_begin;
 
   // Intro View
+  // Pass intro statement arrays to create en/es intro statements
+  introView.populateIntroText(data);
+
   domVars.enSkipIntroButton.innerHTML = data.en.intro.skip_intro;
   domVars.esSkipIntroButton.innerHTML = data.es.intro.skip_intro;
 
   // Main Video View
   domVars.enMainVideoReturnHomeBtnTxt.innerHTML =
-    data.en.main_video.return_home;
+    data.en.main_video.restart_intro;
   domVars.esMainVideoReturnHomeBtnTxt.innerHTML =
-    data.es.main_video.return_home;
+    data.es.main_video.restart_intro;
 
   // Form + Virtual Keyboard View
   domVars.enFormResponseIntro.innerHTML = data.en.form.response_intro;

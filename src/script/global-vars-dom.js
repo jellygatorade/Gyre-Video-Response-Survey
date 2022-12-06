@@ -46,17 +46,23 @@ window.addEventListener("load", () => {
 
   // Intro View
   domVars.introView = document.getElementById("intro-view");
-  // domVars.introText1 = document.getElementById("intro-text-1");
-  // domVars.introText2 = document.getElementById("intro-text-2");
-  // domVars.introText3 = document.getElementById("intro-text-2");
+
+  domVars.introTextParent = document.getElementById("intro-text-parent");
+  domVars.introTextPrototype = document.getElementById("intro-text-prototype");
+  domVars.introTexts = [];
+
+  domVars.introViewControls = document.getElementById("intro-view-controls");
+  domVars.introToggleLangButton = document.getElementById(
+    "intro-toggle-lang-button"
+  );
   domVars.skipIntroButton = document.getElementById("skip-intro-button");
   domVars.enSkipIntroButton = document.getElementById("en-skip-intro-button");
   domVars.esSkipIntroButton = document.getElementById("es-skip-intro-button");
 
   // Main Video View
   domVars.mainVideoView = document.getElementById("main-video-view");
-  domVars.mainVideoViewReturnHomeBtn = document.getElementById(
-    "main-video-view-return-home-btn"
+  domVars.mainVideoViewRestartIntroBtn = document.getElementById(
+    "main-video-view-restart-intro-btn"
   );
   domVars.enMainVideoReturnHomeBtnTxt = document.getElementById(
     "en-main-video-return-home-btn-txt"
@@ -105,7 +111,9 @@ window.addEventListener("load", () => {
   domVars.enFormSubmit = document.getElementById("en-form-submit");
   domVars.esFormSubmit = document.getElementById("es-form-submit");
 
-  domVars.toggleLangButton = document.getElementById("toggle-lang-button");
+  domVars.formToggleLangButton = document.getElementById(
+    "form-toggle-lang-button"
+  );
 
   domVars.simpleKeyboard = document.getElementById("simple-keyboard");
 });
