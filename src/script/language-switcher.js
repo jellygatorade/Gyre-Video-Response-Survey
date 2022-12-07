@@ -1,4 +1,5 @@
 import { domVars } from "./global-vars-dom.js";
+import { simpleKeyboard } from "./simple-keyboard.js";
 
 const languageSwitcher = {
   toggleLangBtns: [],
@@ -18,6 +19,9 @@ const languageSwitcher = {
 
     let langSwitchBtnAction = function () {
       applyLanguage(this.lang.langSwitch);
+
+      // Change the virtual keyboard layout
+      simpleKeyboard.setLanguageLayout(this.lang.langState);
     };
     langSwitchBtnAction = langSwitchBtnAction.bind(this);
 

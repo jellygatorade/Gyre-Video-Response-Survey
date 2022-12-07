@@ -1,11 +1,36 @@
 import { domVars } from "./global-vars-dom.js";
+import { fadeIn, fadeOut } from "../common/script/fade-in-out-elements.js";
+import { fadeBetweenViews } from "./fade-between-views.js";
+import { introView } from "./intro-view.js";
 
 const maxWordCount = 10;
 const turnRedAtCount = 5;
 
-function formInit() {
-  domVars.textAreaWordsRemaining.innerText = maxWordCount.toString();
-}
+const formView = {
+  init: function () {
+    domVars.textAreaWordsRemaining.innerText = maxWordCount.toString();
+    domVars.formViewRestartIntroBtn.addEventListener(
+      "click",
+      this.returnToIntroView
+    );
+  },
+
+  returnToIntroView: function () {
+    fadeBetweenViews(domVars.formView, domVars.introView);
+    introView.playIntro();
+  },
+};
+
+// function formInit() {
+//   domVars.textAreaWordsRemaining.innerText = maxWordCount.toString();
+//   domVars.formViewRestartIntroBtn.addEventListener("click", returnToIntroView);
+// }
+
+// function returnToIntroView() {
+//   fadeBetweenViews(domVars.formView, domVars.introView);
+//   introView.playIntro();
+// }
+
 let wordCount = { atLimit: false };
 
 function checkWordLimit(event) {
@@ -100,7 +125,6 @@ function handleFormSubmit(event) {
   // Retrieve data from the form
   const data = new FormData(domVars.responseForm);
   let formJSON = Object.fromEntries(data.entries());
-
   //console.log(formJSON);
 
   // Process the from data
@@ -128,25 +152,36 @@ function handleFormSubmit(event) {
   //
   // See: https://stackoverflow.com/questions/19839952/all-falsey-values-in-javascript
   //
+  let anyEmptyFormValues = false;
   Object.values(formJSON).forEach((value) => {
     if (!value) {
-      console.log("One or more form entries is empty.");
-      return;
+      anyEmptyFormValues = true;
     }
   });
+
+  if (anyEmptyFormValues) {
+    // Display a message for empty form
+    console.error("One or more form entries is empty.");
+    return;
+  }
 
   console.log(formJSON);
 
   // Send to formspark instance
   // Documentation: https://documentation.formspark.io/examples/ajax.html#fetch
-  fetch("https://submit-form.com/echo", {
+  const formEndpoints = {
+    echoTest: "https://submit-form.com/echo",
+    kehindeWileyResponse: "https://submit-form.com/9xJoIZjJ",
+  };
+
+  fetch(formEndpoints.echoTest, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
     },
     body: JSON.stringify({
-      message: formJSON.kehinde_response, // form data is passed here
+      "Kehinde Wiley Response": formJSON.kehinde_response, // key gives name to formspark dashboard key, form data is passed here as value
     }),
   })
     .then(function (response) {
@@ -158,7 +193,7 @@ function handleFormSubmit(event) {
 }
 
 export {
-  formInit,
+  formView,
   wordCount,
   checkWordLimit,
   handleFormSubmit,

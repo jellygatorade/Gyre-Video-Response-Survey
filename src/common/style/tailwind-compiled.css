@@ -521,14 +521,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 2rem;
 }
 
-.top-\[40px\] {
-  top: 40px;
-}
-
-.right-\[40px\] {
-  right: 40px;
-}
-
 .z-\[5000\] {
   z-index: 5000;
 }
@@ -569,16 +561,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 100;
 }
 
-.z-\[290\] {
-  z-index: 290;
-}
-
 .z-\[250\] {
   z-index: 250;
-}
-
-.m-\[20px\] {
-  margin: 20px;
 }
 
 .my-\[1rem\] {
@@ -610,16 +594,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
-.h-\[60px\] {
-  height: 60px;
-}
-
-.h-1\/2 {
-  height: 50%;
-}
-
 .h-\[400px\] {
   height: 400px;
+}
+
+.h-\[60px\] {
+  height: 60px;
 }
 
 .max-h-\[400px\] {
@@ -634,18 +614,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
-.w-\[800px\] {
-  width: 800px;
-}
-
-.w-\[1440px\] {
-  width: 1440px;
-}
-
-.w-3\/4 {
-  width: 75%;
-}
-
 .w-2\/3 {
   width: 66.666667%;
 }
@@ -656,22 +624,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[700px\] {
   max-width: 700px;
-}
-
-.max-w-\[1440px\] {
-  max-width: 1440px;
-}
-
-.max-w-\[1280px\] {
-  max-width: 1280px;
-}
-
-.max-w-\[1080px\] {
-  max-width: 1080px;
-}
-
-.max-w-\[1000px\] {
-  max-width: 1000px;
 }
 
 .max-w-\[960px\] {
@@ -687,10 +639,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .resize-none {
   resize: none;
-}
-
-.resize-y {
-  resize: vertical;
 }
 
 .flex-row {
@@ -795,20 +743,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
-.pr-\[1rem\] {
-  padding-right: 1rem;
-}
-
-.pr-\[0\.25rem\] {
-  padding-right: 0.25rem;
-}
-
-.pr-\[0\.15rem\] {
-  padding-right: 0.15rem;
+.pt-\[0\.35rem\] {
+  padding-top: 0.35rem;
 }
 
 .pl-\[0\.15rem\] {
   padding-left: 0.15rem;
+}
+
+.pr-\[0\.15rem\] {
+  padding-right: 0.15rem;
 }
 
 .pt-\[4rem\] {
@@ -817,6 +761,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-center {
   text-align: center;
+}
+
+.font-CaseTextLight {
+  font-family: CaseText-Light;
 }
 
 .font-CaseTextRegular {
@@ -842,15 +790,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
-.text-\[48px\] {
-  font-size: 48px;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -859,10 +798,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.italic {
-  font-style: italic;
 }
 
 .leading-loose {
@@ -889,11 +824,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-red-700 {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
 .text-red-500 {
@@ -965,12 +895,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:border-orange-ncma:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(235 51 0 / var(--tw-border-opacity));
+  border-color: rgb(224 89 42 / var(--tw-border-opacity));
 }
 
 .hover\:text-orange-ncma:hover {
   --tw-text-opacity: 1;
-  color: rgb(235 51 0 / var(--tw-text-opacity));
+  color: rgb(224 89 42 / var(--tw-text-opacity));
 }
 
 .focus\:outline:focus {
@@ -982,5 +912,5 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .focus\:outline-orange-ncma:focus {
-  outline-color: #eb3300;
+  outline-color: #e0592a;
 }

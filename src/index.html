@@ -127,14 +127,14 @@
       >
         <button
           id="intro-toggle-lang-button"
-          class="border border-white rounded-full px-[0.875rem] py-[0.25rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+          class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
         >
           <span lang="en" id="en-test-lang-button">Español</span>
           <span lang="es" id="es-test-lang-button">English</span>
         </button>
         <button
           id="skip-intro-button"
-          class="border border-white rounded-full px-[0.875rem] py-[0.25rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+          class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
         >
           <span lang="en" id="en-skip-intro-button">En Skip Intro</span>
           <span lang="es" id="es-skip-intro-button">Es Skip Intro</span>
@@ -152,7 +152,7 @@
         <button
           type="button"
           id="main-video-view-restart-intro-btn"
-          class="z-[300] absolute bottom-[2rem] right-[2rem] border border-white bg-black box-shadow-black-3px rounded-full px-[0.875rem] py-[0.25rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+          class="z-[300] absolute bottom-[2rem] right-[2rem] border border-white bg-black box-shadow-black-3px rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
         >
           <i class="fas fa-undo-alt pr-[0.15rem]"> </i>
           <span lang="en" id="en-main-video-return-home-btn-txt"></span>
@@ -176,7 +176,7 @@
       <div class="h-full flex flex-col justify-center">
         <div class="w-full flex flex-row justify-center">
           <div
-            class="w-2/3 max-w-2/3 [ font-CaseTextLight text-xl tracking-wide ]"
+            class="w-2/3 max-w-2/3 pt-[4rem] [ font-CaseTextLight text-xl tracking-wide ]"
           >
             <div>
               <p class="mb-[1rem]">
@@ -225,23 +225,37 @@
               <button
                 id="response-form-submit-button"
                 type="submit"
-                class="border border-white rounded-full px-[0.875rem] py-[0.25rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+                class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
               >
                 <span lang="en" id="en-form-submit">En Submit</span>
                 <span lang="es" id="es-form-submit">Es Submit</span>
               </button>
-              <button
-                id="form-toggle-lang-button"
-                class="border border-white rounded-full px-[0.875rem] py-[0.25rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
-              >
-                Español
-              </button>
+              <div class="flex flex-row justify-end gap-[0.5rem]">
+                <button
+                  id="form-view-restart-intro-btn"
+                  class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+                >
+                  <i class="fas fa-undo-alt pr-[0.15rem]"> </i>
+                  <span lang="en" id="en-form-view-restart-intro-btn-txt"
+                    >En Restart Intro Txt</span
+                  >
+                  <span lang="es" id="es-form-view-restart-intro-btn-txt"
+                    >Es Restart Intro Txt</span
+                  >
+                </button>
+                <button
+                  id="form-toggle-lang-button"
+                  class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+                >
+                  Español
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- absolute left-0 bottom-[2rem] -->
-        <div class="w-full pt-[4rem] flex flex-row justify-center">
+        <div class="w-full flex flex-row justify-center">
           <div id="simple-keyboard" class="simple-keyboard"></div>
         </div>
       </div>

@@ -6,17 +6,17 @@ import {
   setupIdleTimerTier1,
 } from "./idle-timer-tier-1-background.js";
 import { interactionEvents } from "./interaction-events.js";
-import { attractViewInitFns } from "./attract-view.js";
+import { attractView } from "./attract-view.js";
 import { introView } from "./intro-view.js";
 import { mainVideoView } from "./main-video-view.js";
 
 import { domVars } from "./global-vars-dom.js";
 import {
-  formInit,
+  formView,
   checkWordLimit,
   handleFormSubmit,
 } from "./handle-form-input.js";
-import { simpleKeyboardInit } from "./simple-keyboard.js";
+import { simpleKeyboard } from "./simple-keyboard.js";
 
 window.addEventListener("load", () => {
   /******************************
@@ -33,11 +33,14 @@ window.addEventListener("load", () => {
   // Apply the language specified in current "langState"
   languageSwitcher.applyLanguage(languageSwitcher.lang.langState);
 
+  simpleKeyboard.init();
+  simpleKeyboard.setLanguageLayout(languageSwitcher.lang.langState);
+
   /******************************
    * Initialize Views
    ******************************/
   interactionEvents.init();
-  attractViewInitFns();
+  attractView.init();
   introView.init();
   mainVideoView.init();
 
@@ -48,13 +51,13 @@ window.addEventListener("load", () => {
   //setupIdleTimerTier1();
 
   /******************************
-   * From + Virtual Keyboard
+   * Form
    ******************************/
-  formInit();
+  formView.init();
 
+  // These should be moved to within formInit()
+  // Also checkWordLimit vs checkWordLimitExport?
   domVars.responseFormTextArea.addEventListener("input", checkWordLimit); // For physical keyboard input
 
   domVars.responseFormSubmitBtn.addEventListener("click", handleFormSubmit);
-
-  simpleKeyboardInit();
 });

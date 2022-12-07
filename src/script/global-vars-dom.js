@@ -84,9 +84,6 @@ window.addEventListener("load", () => {
   domVars.textAreaWordsRemaining = document.getElementById(
     "textarea-words-remaining"
   );
-  domVars.responseFormSubmitBtn = document.getElementById(
-    "response-form-submit-button"
-  );
 
   domVars.enFormResponseIntro = document.getElementById(
     "en-form-response-intro"
@@ -108,8 +105,21 @@ window.addEventListener("load", () => {
     "es-form-words-remaining"
   );
 
+  domVars.responseFormSubmitBtn = document.getElementById(
+    "response-form-submit-button"
+  );
   domVars.enFormSubmit = document.getElementById("en-form-submit");
   domVars.esFormSubmit = document.getElementById("es-form-submit");
+
+  domVars.formViewRestartIntroBtn = document.getElementById(
+    "form-view-restart-intro-btn"
+  );
+  domVars.enFormViewRestartIntroBtnTxt = document.getElementById(
+    "en-form-view-restart-intro-btn-txt"
+  );
+  domVars.esFormViewRestartIntroBtnTxt = document.getElementById(
+    "es-form-view-restart-intro-btn-txt"
+  );
 
   domVars.formToggleLangButton = document.getElementById(
     "form-toggle-lang-button"

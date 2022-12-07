@@ -4,11 +4,13 @@ module.exports = {
     fontFamily: {
       CaseLight: ["Case-Light"],
       CaseMedium: ["Case-Medium"],
+      CaseTextLight: ["CaseText-Light"],
       CaseTextRegular: ["CaseText-Regular"],
       CaseTextMedium: ["CaseText-Medium"],
       CaseMicroRegular: ["CaseMicro-Regular"],
     },
     colors: {
+      /* Including 2022 NCMA palette and selections from Tailwind default color palette */
       white: "#ffffff",
       black: "#000000",
       transparent: "rgba(0, 0, 0, 0)",
@@ -36,7 +38,20 @@ module.exports = {
         800: "#991b1b",
         900: "#7f1d1d",
       },
+      orange: {
+        ncma: "#e0592a",
+      },
+      yellow: {
+        ncma: "#ffce02",
+      },
+      "light-green": {
+        ncma: "#aaac24",
+      },
+      "dark-green": {
+        ncma: "#1a5632",
+      },
       blue: {
+        ncma: "#008fbe",
         50: "#eff6ff",
         100: "#dbeafe",
         200: "#bfdbfe",
@@ -47,6 +62,9 @@ module.exports = {
         700: "#1d4ed8",
         800: "#1e40af",
         900: "#1e3a8a",
+      },
+      "dark-blue": {
+        ncma: "#004a97",
       },
       purple: {
         50: "#faf5ff",
@@ -59,9 +77,16 @@ module.exports = {
         700: "#7e22ce",
         800: "#6b21a8",
         900: "#581c87",
+        ncma: "#60269e",
       },
-      orange: {
-        ncma: "#eb3300" /*Pantone 2028 C*/,
+      violet: {
+        ncma: "#9e28b5",
+      },
+      rust: {
+        ncma: "#8c3b19",
+      },
+      "red-orange": {
+        ncma: "#d64123",
       },
     },
     extend: {},

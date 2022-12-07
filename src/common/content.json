@@ -28,7 +28,8 @@
       "response_intro": "Now that you have listened to various stories and viewpoints about the painting, consider how your perspective may have shifted.",
       "response_question": "Interpretation of a work of art can change over time and is often impacted by the viewer’s personal experiences and current events. What is your response to this painting today?",
       "words_remaining": "Words remaining:",
-      "submit": "Submit"
+      "submit": "Submit",
+      "restart_intro": "Restart from intro"
     }
   },
   "es": {
@@ -60,7 +61,8 @@
       "response_intro": "!Ahora que ha escuchado varias historias y puntos de vista sobre la pintura, considere cómo puede haber cambiado su perspectiva.",
       "response_question": "!La interpretación de una obra de arte puede cambiar con el tiempo y, a menudo, se ve afectada por las experiencias personales y los eventos actuales del espectador. ¿Cuál es su respuesta a esta pintura hoy?",
       "words_remaining": "!Palabras restantes:",
-      "submit": "!Enviar"
+      "submit": "!Enviar",
+      "restart_intro": "!Reiniciar desde la introducción"
     }
   }
 }
