@@ -16,6 +16,8 @@ import {
   checkWordLimit,
   handleFormSubmit,
 } from "./handle-form-input.js";
+import { formConfirmationModal } from "./form-confirmation-modal.js";
+import { formSubmissionModal } from "./form-submission-modal.js";
 import { simpleKeyboard } from "./simple-keyboard.js";
 
 window.addEventListener("load", () => {
@@ -43,6 +45,8 @@ window.addEventListener("load", () => {
   attractView.init();
   introView.init();
   mainVideoView.init();
+  formConfirmationModal.init();
+  formSubmissionModal.init();
 
   /******************************
    * Timeout timer

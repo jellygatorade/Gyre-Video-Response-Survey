@@ -1,7 +1,10 @@
 import { domVars } from "./global-vars-dom.js";
+import { removeIdleTimerTier1 } from "./idle-timer-tier-1-background.js";
 import { fadeIn, fadeOut } from "../common/script/fade-in-out-elements.js";
 import { fadeBetweenViews } from "./fade-between-views.js";
 import { introView } from "./intro-view.js";
+import { formConfirmationModal } from "./form-confirmation-modal.js";
+import { formSubmissionModal } from "./form-submission-modal.js";
 
 const maxWordCount = 10;
 const turnRedAtCount = 5;
@@ -17,19 +20,14 @@ const formView = {
 
   returnToIntroView: function () {
     fadeBetweenViews(domVars.formView, domVars.introView);
+    removeIdleTimerTier1();
     introView.playIntro();
   },
 };
 
-// function formInit() {
-//   domVars.textAreaWordsRemaining.innerText = maxWordCount.toString();
-//   domVars.formViewRestartIntroBtn.addEventListener("click", returnToIntroView);
-// }
-
-// function returnToIntroView() {
-//   fadeBetweenViews(domVars.formView, domVars.introView);
-//   introView.playIntro();
-// }
+/****************************************
+ *  Word Count
+ ****************************************/
 
 let wordCount = { atLimit: false };
 
@@ -118,6 +116,12 @@ function checkWordLimitExport(string) {
   }
 }
 
+/****************************************
+ *  Form submit
+ ****************************************/
+
+let formInput;
+
 // Handles processing and storage of form data
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -167,6 +171,15 @@ function handleFormSubmit(event) {
 
   console.log(formJSON);
 
+  // Store formJSON internally for use within submitForm (which is called by another script)
+  formInput = formJSON;
+
+  // Populate and the form input preview confirmation modal
+  formConfirmationModal.populate(formJSON);
+  fadeIn(domVars.formConfirmationModal);
+}
+
+function submitForm() {
   // Send to formspark instance
   // Documentation: https://documentation.formspark.io/examples/ajax.html#fetch
   const formEndpoints = {
@@ -174,6 +187,7 @@ function handleFormSubmit(event) {
     kehindeWileyResponse: "https://submit-form.com/9xJoIZjJ",
   };
 
+  // Pass in the appropriate formspark endpoint
   fetch(formEndpoints.echoTest, {
     method: "POST",
     headers: {
@@ -181,19 +195,43 @@ function handleFormSubmit(event) {
       Accept: "application/json",
     },
     body: JSON.stringify({
-      "Kehinde Wiley Response": formJSON.kehinde_response, // key gives name to formspark dashboard key, form data is passed here as value
+      "Kehinde Wiley Response": formInput.kehinde_response, // key gives name to formspark dashboard key, form data is passed here as value
     }),
   })
     .then(function (response) {
-      console.log(response);
+      if (response.status === 200) {
+        onFormSubmitSuccess(response);
+      } else {
+        onFormSubmitError(response);
+      }
     })
     .catch(function (error) {
-      console.error(error);
+      onFormSubmitError(error);
     });
+}
+
+function onFormSubmitSuccess(response) {
+  console.log(response);
+
+  formSubmissionModal.removeTouchToFadeOut();
+  formSubmissionModal.result("success");
+  fadeIn(domVars.formSubmissionModal);
+  formSubmissionModal.startCountdown();
+}
+
+function onFormSubmitError(error) {
+  console.error(error);
+
+  formSubmissionModal.addTouchToFadeOut();
+  formSubmissionModal.result("error");
+  fadeIn(domVars.formSubmissionModal);
+
+  domVars.formConfirmationConfirmButton.disabled = false;
 }
 
 export {
   formView,
+  submitForm,
   wordCount,
   checkWordLimit,
   handleFormSubmit,

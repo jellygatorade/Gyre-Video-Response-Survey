@@ -15,6 +15,11 @@
       href="./common/style/tailwind-compiled.css"
     />
     <link rel="stylesheet" type="text/css" href="./common/assets/fa/all.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./common/style/webkit-scrollbar.css"
+    />
   </head>
 
   <body class="w-full h-full bg-black text-white p-[2rem] font-CaseTextLight">
@@ -37,7 +42,7 @@
             class="relative max-h-[400px] max-w-[700px] opacity-100 z-[5020] bg-black border border-white rounded-2xl box-shadow-black-4px"
           >
             <div
-              class="w-full h-full flex flex-col flex-nowrap justify-between items-center py-[0.857rem] p-[1.5rem]"
+              class="w-full h-full flex flex-col flex-nowrap justify-between items-center py-[0.875rem] p-[1.5rem]"
             >
               <div
                 class="h-full w-full overflow-y-auto webkit-scrollbar text-xl text-center leading-loose"
@@ -152,7 +157,7 @@
         <button
           type="button"
           id="main-video-view-restart-intro-btn"
-          class="z-[300] absolute bottom-[2rem] right-[2rem] border border-white bg-black box-shadow-black-3px rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+          class="z-[300] absolute bottom-[2rem] right-[2rem] border border-white bg-black bg-opacity-30 box-shadow-black-3px rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
         >
           <i class="fas fa-undo-alt pr-[0.15rem]"> </i>
           <span lang="en" id="en-main-video-return-home-btn-txt"></span>
@@ -249,6 +254,156 @@
                 >
                   Español
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Confirmation Modal -->
+        <div
+          id="form-confirmation-modal"
+          class="h-full w-full absolute top-0 left-0 z-[4000] invisible opacity-0 transition-all duration-300"
+        >
+          <div
+            id="form-confirmation-modal-overlay"
+            class="h-full w-full absolute top-0 left-0 bg-black opacity-75 z-[5010]"
+          ></div>
+          <div
+            class="absolute top-0 left-0 h-full w-full flex flex-row justify-center items-center z-[5020] pointer-events-none"
+          >
+            <div class="h-full flex flex-col justify-center items-center">
+              <div
+                class="relative max-w-[700px] opacity-100 z-[6000] bg-black border border-white rounded-2xl box-shadow-black-4px pointer-events-auto"
+              >
+                <div
+                  class="w-full h-full flex flex-col flex-nowrap justify-between items-center py-[0.75rem] p-[1.5rem]"
+                >
+                  <div
+                    class="h-full w-full text-xl text-left leading-loose tracking-wide"
+                  >
+                    <div class="pt-[0.5rem] pb-[1rem]">
+                      <h2>
+                        <span lang="en" id="en-form-confirmation-top-text"
+                          >en-form-confirmation-top-text</span
+                        >
+                        <span lang="es" id="es-form-confirmation-top-text"
+                          >es-form-confirmation-top-text</span
+                        >
+                      </h2>
+                    </div>
+                    <div
+                      class="leading-normal text-neutral-300 text-base italic max-h-[400px] pr-[0.5rem] overflow-y-auto webkit-scrollbar"
+                    >
+                      <p>
+                        <span>"</span
+                        ><span id="form-confirmation-replicated-input"
+                          >form-confirmation-replicated-input</span
+                        ><span>"</span>
+                      </p>
+                    </div>
+                    <div
+                      class="[ font-CaseTextLight text-base tracking-wide] pt-[1rem] pb-[0.75rem] flex flex-row justify-end gap-[0.5rem]"
+                    >
+                      <button
+                        id="form-confirmation-back-button"
+                        class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+                      >
+                        <i class="fas fa-arrow-left pl-[0.15rem]"></i>
+                        <span lang="en" id="en-form-confirmation-back-button"
+                          >en-form-confirmation-back-button</span
+                        >
+                        <span lang="es" id="es-form-confirmation-back-button"
+                          >es-form-confirmation-back-button</span
+                        >
+                      </button>
+                      <button
+                        id="form-confirmation-confirm-button"
+                        class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide disabled:border-neutral-500 disabled:text-neutral-500 hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+                      >
+                        <span lang="en" id="en-form-confirmation-confirm-button"
+                          >en-form-confirmation-confirm-button</span
+                        >
+                        <span lang="es" id="es-form-confirmation-confirm-button"
+                          >es-form-confirmation-confirm-button</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form submission modal -->
+        <div
+          id="form-submission-modal"
+          class="h-full w-full absolute top-0 left-0 z-[10000] invisible opacity-0 transition-all duration-300"
+        >
+          <div
+            id="form-submission-modal-overlay"
+            class="h-full w-full absolute top-0 left-0 bg-black opacity-75 z-[5010]"
+          ></div>
+          <div
+            id="form-submission-modal-tap-to-continue-overlay"
+            class="h-full w-full absolute top-0 left-0 timeout-modal-continue-btn z-[5050]"
+          ></div>
+          <div
+            class="absolute top-0 left-0 h-full w-full flex flex-row justify-center items-center z-[5020]"
+          >
+            <div class="h-full flex flex-col justify-center items-center">
+              <div
+                class="relative max-h-[400px] max-w-[700px] opacity-100 z-[5020] bg-black border border-white rounded-2xl box-shadow-black-4px"
+              >
+                <div
+                  class="w-full h-full flex flex-col flex-nowrap justify-between items-center py-[0.75rem] p-[1.5rem]"
+                >
+                  <div
+                    class="h-full w-full overflow-y-auto webkit-scrollbar text-xl text-center leading-loose tracking-wide"
+                  >
+                    <div id="form-submission-success" class="">
+                      <h2>
+                        <span lang="en" id="en-form-success-top-text"
+                          >en-form-success-top-text</span
+                        >
+                        <span lang="es" id="es-form-success-top-text"
+                          >es-form-success-top-text</span
+                        >
+                      </h2>
+                      <h2>
+                        <span lang="en" id="en-form-success-timeout-text"
+                          >en-form-success-timeout-text</span
+                        >
+                        <span lang="es" id="es-form-success-timeout-text"
+                          >es-form-success-timeout-text</span
+                        >
+                        <span
+                          id="form-submission-modal-countdown-text"
+                          class="leading-normal font-CaseTextRegular"
+                          >Seconds</span
+                        >.
+                      </h2>
+                    </div>
+                    <div id="form-submission-error" class="">
+                      <h2>
+                        <span lang="en" id="en-form-error-top-text"
+                          >en-form-error-top-text</span
+                        >
+                        <span lang="es" id="es-form-error-top-text"
+                          >es-form-error-top-text</span
+                        >
+                      </h2>
+                      <h2>
+                        <span lang="en" id="en-form-error-bottom-text"
+                          >en-form-error-bottom-text</span
+                        >
+                        <span lang="es" id="es-form-error-bottom-text"
+                          >es-form-error-bottom-text</span
+                        >
+                      </h2>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

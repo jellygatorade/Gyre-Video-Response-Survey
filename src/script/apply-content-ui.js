@@ -48,6 +48,38 @@ function applyContent(data) {
   domVars.esFormWordsRemaining.innerHTML = data.es.form.words_remaining;
   domVars.esFormSubmit.innerHTML = data.es.form.submit;
   domVars.esFormViewRestartIntroBtnTxt.innerHTML = data.es.form.restart_intro;
+
+  // Form Confirmation Modal
+  domVars.enFormConfirmationTopText.innerHTML =
+    data.en.form_confirm_modal.top_text;
+  domVars.enFormConfirmationBackButton.innerHTML =
+    data.en.form_confirm_modal.go_back;
+  domVars.enFormConfirmationConfirmButton.innerHTML =
+    data.en.form_confirm_modal.confirm_and_submit;
+
+  domVars.esFormConfirmationTopText.innerHTML =
+    data.es.form_confirm_modal.top_text;
+  domVars.esFormConfirmationBackButton.innerHTML =
+    data.es.form_confirm_modal.go_back;
+  domVars.esFormConfirmationConfirmButton.innerHTML =
+    data.es.form_confirm_modal.confirm_and_submit;
+
+  // Form Submission Modal
+  domVars.enFormSuccessTopText.innerHTML =
+    data.en.form_submit_modal.success_top;
+  domVars.enFormSuccessTimeoutText.innerHTML =
+    data.en.form_submit_modal.success_timeout;
+  domVars.enFormErrorTopText.innerHTML = data.en.form_submit_modal.error_top;
+  domVars.enFormErrorBottomText.innerHTML =
+    data.en.form_submit_modal.error_bottom;
+
+  domVars.esFormSuccessTopText.innerHTML =
+    data.es.form_submit_modal.success_top;
+  domVars.esFormSuccessTimeoutText.innerHTML =
+    data.es.form_submit_modal.success_timeout;
+  domVars.esFormErrorTopText.innerHTML = data.es.form_submit_modal.error_top;
+  domVars.esFormErrorBottomText.innerHTML =
+    data.es.form_submit_modal.error_bottom;
 }
 
 export { applyContent };

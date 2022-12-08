@@ -3,6 +3,7 @@ import { interactionEvents } from "./interaction-events.js";
 import { fadeIn, fadeOut } from "../common/script/fade-in-out-elements.js";
 import { fadeBetweenViews } from "./fade-between-views.js";
 import { introView } from "./intro-view.js";
+import { setupIdleTimerTier1 } from "./idle-timer-tier-1-background.js";
 
 const mainVideoView = {
   init: function () {
@@ -57,6 +58,7 @@ const mainVideoView = {
 
   proceedToFormView: function () {
     fadeBetweenViews(domVars.mainVideoView, domVars.formView);
+    setupIdleTimerTier1();
   },
 
   returnToIntroView: function () {

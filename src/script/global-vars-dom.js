@@ -126,6 +126,86 @@ window.addEventListener("load", () => {
   );
 
   domVars.simpleKeyboard = document.getElementById("simple-keyboard");
+
+  // Form confirmation modal - child of form processing modal
+  domVars.formConfirmationModal = document.getElementById(
+    "form-confirmation-modal"
+  );
+  domVars.formConfirmationModalOverlay = document.getElementById(
+    "form-confirmation-modal-overlay"
+  );
+  domVars.enFormConfirmationTopText = document.getElementById(
+    "en-form-confirmation-top-text"
+  );
+  domVars.esFormConfirmationTopText = document.getElementById(
+    "es-form-confirmation-top-text"
+  );
+  domVars.formConfirmationReplicatedInput = document.getElementById(
+    "form-confirmation-replicated-input"
+  );
+
+  domVars.formConfirmationBackButton = document.getElementById(
+    "form-confirmation-back-button"
+  );
+  domVars.enFormConfirmationBackButton = document.getElementById(
+    "en-form-confirmation-back-button"
+  );
+  domVars.esFormConfirmationBackButton = document.getElementById(
+    "es-form-confirmation-back-button"
+  );
+
+  domVars.formConfirmationConfirmButton = document.getElementById(
+    "form-confirmation-confirm-button"
+  );
+  domVars.enFormConfirmationConfirmButton = document.getElementById(
+    "en-form-confirmation-confirm-button"
+  );
+  domVars.esFormConfirmationConfirmButton = document.getElementById(
+    "es-form-confirmation-confirm-button"
+  );
+
+  // Form submission modal
+  domVars.formSubmissionModal = document.getElementById(
+    "form-submission-modal"
+  );
+  domVars.formSubmissionModalTapToContinueOverlay = document.getElementById(
+    "form-submission-modal-tap-to-continue-overlay"
+  );
+  domVars.formSubmissionSuccess = document.getElementById(
+    "form-submission-success"
+  );
+  domVars.formSubmissionCountdownText = document.getElementById(
+    "form-submission-modal-countdown-text"
+  );
+  domVars.formSubmissionError = document.getElementById(
+    "form-submission-error"
+  );
+
+  domVars.enFormSuccessTopText = document.getElementById(
+    "en-form-success-top-text"
+  );
+  domVars.enFormSuccessTimeoutText = document.getElementById(
+    "en-form-success-timeout-text"
+  );
+  domVars.enFormErrorTopText = document.getElementById(
+    "en-form-error-top-text"
+  );
+  domVars.enFormErrorBottomText = document.getElementById(
+    "en-form-error-bottom-text"
+  );
+
+  domVars.esFormSuccessTopText = document.getElementById(
+    "es-form-success-top-text"
+  );
+  domVars.esFormSuccessTimeoutText = document.getElementById(
+    "es-form-success-timeout-text"
+  );
+  domVars.esFormErrorTopText = document.getElementById(
+    "es-form-error-top-text"
+  );
+  domVars.esFormErrorBottomText = document.getElementById(
+    "es-form-error-bottom-text"
+  );
 });
 
 export { domVars };

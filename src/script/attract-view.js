@@ -1,8 +1,10 @@
 import { domVars } from "./global-vars-dom.js";
 import { fadeIn, fadeOut } from "../common/script/fade-in-out-elements.js";
 import { fadeBetweenViews } from "./fade-between-views.js";
-import { setupIdleTimerTier1 } from "./idle-timer-tier-1-background.js";
 import { introView } from "./intro-view.js";
+
+// For development only
+import { formSubmissionModal } from "./form-submission-modal.js";
 
 const attractView = {
   init: function () {
@@ -26,14 +28,14 @@ const attractView = {
   },
 
   removeAttractView: function () {
-    // // Proceed to intro view
-    // fadeBetweenViews(domVars.attractView, domVars.introView);
+    // Proceed to intro view
+    fadeBetweenViews(domVars.attractView, domVars.introView);
 
-    // // Start the three paragraph slideshow from intro view
-    // introView.playIntro();
+    // Start the three paragraph slideshow from intro view
+    introView.playIntro();
 
-    // For developement only
-    fadeBetweenViews(domVars.attractView, domVars.formView);
+    // // For developement only
+    // fadeBetweenViews(domVars.attractView, domVars.formView);
 
     setTimeout(() => {
       // Pause the attract video

@@ -10,8 +10,8 @@ import { loadIdleTimerTier2 } from "./idle-timer-tier-2-timeout-modal.js";
 
 // This script defines timeout functions for taking action on idle
 
-const idleTimeoutInMilliseconds = 5 * 1000; // For dev - 5 seconds
-//const idleTimeoutInMilliseconds = 90 * 1000; // For production - 90 seconds
+//const idleTimeoutInMilliseconds = 5 * 1000; // For dev - 5 seconds
+const idleTimeoutInMilliseconds = 90 * 1000; // For production - 90 seconds
 let idleTimeoutId;
 const doInactiveLoopTimeInMilliseconds = 60 * 1000;
 

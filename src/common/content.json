@@ -21,7 +21,7 @@
       "skip_intro": "Skip intro"
     },
     "main_video": {
-      "main_video_path": "./common/assets/video/Concert.mp4",
+      "main_video_path": "./common/assets/video/concert.mp4",
       "restart_intro": "Restart from intro"
     },
     "form": {
@@ -30,6 +30,17 @@
       "words_remaining": "Words remaining:",
       "submit": "Submit",
       "restart_intro": "Restart from intro"
+    },
+    "form_confirm_modal": {
+      "top_text": "This is how your response will be recorded.",
+      "go_back": "Go back",
+      "confirm_and_submit": "Confirm and submit"
+    },
+    "form_submit_modal": {
+      "success_top": "Thank you. Your response has been recorded anonymously.",
+      "success_timeout": "The application will reset in",
+      "error_top": "There was an error in recording your response. 😕",
+      "error_bottom": "Tap anywhere to try again."
     }
   },
   "es": {
@@ -54,7 +65,7 @@
       "skip_intro": "!Presiona Intro"
     },
     "main_video": {
-      "main_video_path": "./common/assets/video/Silver.mp4",
+      "main_video_path": "./common/assets/video/wiley-video-english.mp4",
       "restart_intro": "!Reiniciar desde la introducción"
     },
     "form": {
@@ -63,6 +74,17 @@
       "words_remaining": "!Palabras restantes:",
       "submit": "!Enviar",
       "restart_intro": "!Reiniciar desde la introducción"
+    },
+    "form_confirm_modal": {
+      "top_text": "!Así se registrará su respuesta.",
+      "go_back": "!Vovler",
+      "confirm_and_submit": "!Confirmar y enviar"
+    },
+    "form_submit_modal": {
+      "success_top": "!Gracias. Su respuesta ha sido registrada de forma anónima.",
+      "success_timeout": "!La aplicación se restablecerá en",
+      "error_top": "!Hubo un error al registrar su respuesta. 😕",
+      "error_bottom": "!Toque en cualquier lugar para volver a intentarlo."
     }
   }
 }
