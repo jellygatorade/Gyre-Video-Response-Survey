@@ -34,8 +34,8 @@ const attractView = {
     // Start the three paragraph slideshow from intro view
     introView.playIntro();
 
-    // // For developement only
-    // fadeBetweenViews(domVars.attractView, domVars.formView);
+    // For developement only
+    //fadeBetweenViews(domVars.attractView, domVars.formView);
 
     setTimeout(() => {
       // Pause the attract video

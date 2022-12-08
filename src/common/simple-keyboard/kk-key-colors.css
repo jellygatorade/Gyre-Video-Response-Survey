@@ -1,0 +1,14 @@
+/* 
+Following
+https://codesandbox.io/s/simple-keyboard-npm-demos-63vr6?fontsize=14&module=/src/index.css&file=/src/index.css:163-395
+*/
+
+/*
+.simple-keyboard .hg-button {
+  transition: all 0.075s ease-in-out;
+}
+*/
+
+.simple-keyboard .hg-button:active {
+  background: #aaaaaa;
+}
