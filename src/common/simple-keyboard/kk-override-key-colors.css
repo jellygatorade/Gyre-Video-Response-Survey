@@ -9,6 +9,12 @@ https://codesandbox.io/s/simple-keyboard-npm-demos-63vr6?fontsize=14&module=/src
 }
 */
 
+/*
 .simple-keyboard .hg-button:active {
+  background: #aaaaaa;
+}
+*/
+
+.hg-theme-default .hg-button.hg-activeButton {
   background: #aaaaaa;
 }
