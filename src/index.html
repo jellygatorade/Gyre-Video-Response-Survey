@@ -179,85 +179,108 @@
       id="form-keyboard-view"
       class="z-[200] absolute top-0 left-0 h-full w-full invisible opacity-0 transition-all duration-300"
     >
-      <div class="h-full flex flex-col justify-center">
-        <div class="w-full flex flex-row justify-center">
-          <div
-            class="w-2/3 max-w-2/3 pt-[4rem] [ font-CaseTextLight text-xl tracking-wide ]"
-          >
-            <div>
-              <p class="mb-[1rem]">
-                <span lang="en" id="en-form-response-intro">
-                  En Response Intro
-                </span>
-                <span lang="es" id="es-form-response-intro">
-                  Es Response Intro
-                </span>
-              </p>
-              <p class="my-[1rem]">
-                <span lang="en" id="en-form-response-question">
-                  En Response Question
-                </span>
-                <span lang="es" id="es-form-response-question">
-                  Es Response Question
-                </span>
-              </p>
-            </div>
-
-            <div>
-              <!-- maxlength="20" -->
-              <form id="response-form">
-                <!-- input class for simple-keyboard -->
-                <textarea
-                  id="response-form-textarea"
-                  class="input w-full h-[400px] p-[1rem] resize-none text-black"
-                  name="kehinde_response"
-                  type="text"
-                ></textarea>
-                <p class="font-CaseTextLight text-base tracking-wide">
-                  <span lang="en" id="en-form-words-remaining"
-                    >En Words remaining</span
-                  >
-                  <span lang="es" id="es-form-words-remaining"
-                    >Es Words remaining</span
-                  >
-                  <span id="textarea-words-remaining"></span>
-                </p>
-              </form>
-            </div>
-
+      <div class="h-full flex flex-col justify-end">
+        <!-- Form -->
+        <div class="grow flex flex-col justify-center">
+          <div class="w-full flex flex-row justify-center">
             <div
-              class="[ font-CaseTextLight text-base tracking-wide] py-[1rem] flex flex-row justify-between"
+              class="w-2/3 max-w-2/3 [ font-CaseTextLight text-xl tracking-wide ]"
             >
-              <button
-                id="response-form-submit-button"
-                type="submit"
-                class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+              <div>
+                <p class="mb-[1rem]">
+                  <span lang="en" id="en-form-response-intro">
+                    En Response Intro
+                  </span>
+                  <span lang="es" id="es-form-response-intro">
+                    Es Response Intro
+                  </span>
+                </p>
+                <p class="my-[1rem]">
+                  <span lang="en" id="en-form-response-question">
+                    En Response Question
+                  </span>
+                  <span lang="es" id="es-form-response-question">
+                    Es Response Question
+                  </span>
+                </p>
+              </div>
+
+              <div>
+                <form id="response-form">
+                  <!-- input class for simple-keyboard -->
+                  <!-- maxlength="" attribute set by js -->
+                  <textarea
+                    id="response-form-textarea"
+                    class="input w-full h-[400px] p-[1rem] resize-none text-black"
+                    name="kehinde_response"
+                    type="text"
+                  ></textarea>
+                  <p
+                    id="words-remaining-parent"
+                    class="font-CaseTextLight text-base tracking-wide"
+                  >
+                    <span lang="en" id="en-form-words-remaining"
+                      >En Words remaining</span
+                    >
+                    <span lang="es" id="es-form-words-remaining"
+                      >Es Words remaining</span
+                    >
+                    <span id="textarea-words-remaining"></span>
+                  </p>
+                  <p
+                    id="chars-remaining-parent"
+                    class="font-CaseTextLight text-base tracking-wide"
+                  >
+                    <span lang="en" id="en-form-chars-remaining"
+                      >En Chars remaining</span
+                    >
+                    <span lang="es" id="es-form-chars-remaining"
+                      >Es Chars remaining</span
+                    >
+                    <span id="textarea-chars-remaining"></span>
+                  </p>
+                </form>
+              </div>
+
+              <div
+                class="[ font-CaseTextLight text-base tracking-wide] py-[1rem] flex flex-row justify-between"
               >
-                <span lang="en" id="en-form-submit">En Submit</span>
-                <span lang="es" id="es-form-submit">Es Submit</span>
-              </button>
-              <div class="flex flex-row justify-end gap-[0.5rem]">
                 <button
-                  id="form-view-restart-intro-btn"
+                  id="response-form-submit-button"
+                  type="submit"
                   class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
                 >
-                  <i class="fas fa-undo-alt pr-[0.15rem]"> </i>
-                  <span lang="en" id="en-form-view-restart-intro-btn-txt"
-                    >En Restart Intro Txt</span
-                  >
-                  <span lang="es" id="es-form-view-restart-intro-btn-txt"
-                    >Es Restart Intro Txt</span
-                  >
+                  <span lang="en" id="en-form-submit">En Submit</span>
+                  <span lang="es" id="es-form-submit">Es Submit</span>
                 </button>
-                <button
-                  id="form-toggle-lang-button"
-                  class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
-                >
-                  Español
-                </button>
+                <div class="flex flex-row justify-end gap-[0.5rem]">
+                  <button
+                    id="form-view-restart-intro-btn"
+                    class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+                  >
+                    <i class="fas fa-undo-alt pr-[0.15rem]"> </i>
+                    <span lang="en" id="en-form-view-restart-intro-btn-txt"
+                      >En Restart Intro Txt</span
+                    >
+                    <span lang="es" id="es-form-view-restart-intro-btn-txt"
+                      >Es Restart Intro Txt</span
+                    >
+                  </button>
+                  <button
+                    id="form-toggle-lang-button"
+                    class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+                  >
+                    Español
+                  </button>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Virtual Keyboard -->
+        <div class="grow-0 w-full flex flex-row justify-center">
+          <div id="simple-keyboard" class="simple-keyboard"></div>
         </div>
 
         <!-- Form Confirmation Modal -->
@@ -408,11 +431,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- absolute left-0 bottom-[2rem] -->
-        <div class="w-full flex flex-row justify-center">
-          <div id="simple-keyboard" class="simple-keyboard"></div>
         </div>
       </div>
     </div>

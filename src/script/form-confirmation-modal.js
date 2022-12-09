@@ -1,6 +1,6 @@
 import { domVars } from "./global-vars-dom.js";
 import { fadeOut } from "../common/script/fade-in-out-elements.js";
-import { submitForm } from "./handle-form-input.js";
+import { formInput } from "./handle-form-input.js";
 
 const formConfirmationModal = {
   init: function () {
@@ -36,6 +36,8 @@ const formConfirmationModal = {
 
   confirmButtonAction: function (event) {
     event.currentTarget.disabled = true;
+
+    const submitForm = formInput.submitForm.bind(formInput);
     submitForm();
   },
 };

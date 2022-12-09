@@ -40,12 +40,14 @@ function applyContent(data) {
   domVars.enFormResponseIntro.innerHTML = data.en.form.response_intro;
   domVars.enFormResponseQuestion.innerHTML = data.en.form.response_question;
   domVars.enFormWordsRemaining.innerHTML = data.en.form.words_remaining;
+  domVars.enFormCharsRemaining.innerHTML = data.en.form.chars_remaining;
   domVars.enFormSubmit.innerHTML = data.en.form.submit;
   domVars.enFormViewRestartIntroBtnTxt.innerHTML = data.en.form.restart_intro;
 
   domVars.esFormResponseIntro.innerHTML = data.es.form.response_intro;
   domVars.esFormResponseQuestion.innerHTML = data.es.form.response_question;
   domVars.esFormWordsRemaining.innerHTML = data.es.form.words_remaining;
+  domVars.esFormCharsRemaining.innerHTML = data.es.form.chars_remaining;
   domVars.esFormSubmit.innerHTML = data.es.form.submit;
   domVars.esFormViewRestartIntroBtnTxt.innerHTML = data.es.form.restart_intro;
 

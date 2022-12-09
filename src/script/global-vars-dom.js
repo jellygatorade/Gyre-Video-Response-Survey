@@ -81,9 +81,6 @@ window.addEventListener("load", () => {
   domVars.responseFormTextArea = document.getElementById(
     "response-form-textarea"
   );
-  domVars.textAreaWordsRemaining = document.getElementById(
-    "textarea-words-remaining"
-  );
 
   domVars.enFormResponseIntro = document.getElementById(
     "en-form-response-intro"
@@ -98,11 +95,30 @@ window.addEventListener("load", () => {
     "es-form-response-question"
   );
 
+  domVars.wordsRemainingParent = document.getElementById(
+    "words-remaining-parent"
+  );
+  domVars.textAreaWordsRemaining = document.getElementById(
+    "textarea-words-remaining"
+  );
   domVars.enFormWordsRemaining = document.getElementById(
     "en-form-words-remaining"
   );
   domVars.esFormWordsRemaining = document.getElementById(
     "es-form-words-remaining"
+  );
+
+  domVars.charsRemainingParent = document.getElementById(
+    "chars-remaining-parent"
+  );
+  domVars.textAreaCharsRemaining = document.getElementById(
+    "textarea-chars-remaining"
+  );
+  domVars.enFormCharsRemaining = document.getElementById(
+    "en-form-chars-remaining"
+  );
+  domVars.esFormCharsRemaining = document.getElementById(
+    "es-form-chars-remaining"
   );
 
   domVars.responseFormSubmitBtn = document.getElementById(

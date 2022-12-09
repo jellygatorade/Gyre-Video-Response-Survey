@@ -28,14 +28,14 @@ const attractView = {
   },
 
   removeAttractView: function () {
-    // Proceed to intro view
-    fadeBetweenViews(domVars.attractView, domVars.introView);
+    // // Proceed to intro view
+    // fadeBetweenViews(domVars.attractView, domVars.introView);
 
-    // Start the three paragraph slideshow from intro view
-    introView.playIntro();
+    // // Start the three paragraph slideshow from intro view
+    // introView.playIntro();
 
     // For developement only
-    //fadeBetweenViews(domVars.attractView, domVars.formView);
+    fadeBetweenViews(domVars.attractView, domVars.formView);
 
     setTimeout(() => {
       // Pause the attract video
