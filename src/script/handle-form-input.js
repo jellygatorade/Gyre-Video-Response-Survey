@@ -274,7 +274,7 @@ const formInput = {
     };
 
     // Pass in the appropriate formspark endpoint
-    fetch(formEndpoints.echoTest, {
+    fetch(formEndpoints.kehindeWileyResponse, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -292,7 +292,6 @@ const formInput = {
         }
       })
       .catch(function (error) {
-        console.log(that);
         that.onFormSubmitError(error);
       });
   },

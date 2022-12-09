@@ -60,6 +60,8 @@ const simpleKeyboard = {
   theKeyboard: undefined,
 
   setLanguageLayout: function (lang) {
+    //console.log(this.afterKeyPressCaretPos);
+
     if (lang === "en") {
       // Change keyboard layout to english
       this.theKeyboard.setOptions({
@@ -73,6 +75,10 @@ const simpleKeyboard = {
       });
       this.setStyle();
     }
+
+    // Reset the caret position
+    this.theKeyboard.setCaretPosition(this.afterKeyPressCaretPos);
+    //console.log(this.theKeyboard.getCaretPosition());
   },
 
   init: function () {
@@ -137,13 +143,13 @@ const simpleKeyboard = {
     // Move the caret to the correct position
     // Otherwise the caret is set at end of string when <textarea>.value is set
     domVars.responseFormTextArea.setSelectionRange(
-      this.newCaretPos,
-      this.newCaretPos
+      this.afterKeyPressCaretPos,
+      this.afterKeyPressCaretPos
     );
   },
 
-  lastPressedCaretPos: 0,
-  newCaretPos: 0,
+  beforeKeyPressCaretPos: 0,
+  afterKeyPressCaretPos: 0,
 
   onKeyPress: function (button) {
     //console.log("KeyPress");
@@ -160,15 +166,15 @@ const simpleKeyboard = {
       this.theKeyboard.setCaretPosition(0);
     }
 
-    this.lastPressedCaretPos = this.theKeyboard.getCaretPosition();
+    this.beforeKeyPressCaretPos = this.theKeyboard.getCaretPosition();
 
     if (button === "{bksp}") {
-      this.newCaretPos = this.lastPressedCaretPos - 1; // one char deleted, so left one position
+      this.afterKeyPressCaretPos = this.beforeKeyPressCaretPos - 1; // one char deleted, so left one position
     } else {
-      this.newCaretPos = this.lastPressedCaretPos + 1; // one char added, so right one position
+      this.afterKeyPressCaretPos = this.beforeKeyPressCaretPos + 1; // one char added, so right one position
     }
 
-    //console.log(this.lastPressedCaretPos, this.newCaretPos);
+    //console.log(this.beforeKeyPressCaretPos, this.afterKeyPressCaretPos);
   },
 
   onKeyReleased: function (button) {
