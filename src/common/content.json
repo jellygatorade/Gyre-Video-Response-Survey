@@ -16,7 +16,7 @@
       "text_array": [
         "Let's discover more about <i>Judith and Holofernes</i>, created by Kehinde Wiley. This painting is considered one of the most challenging works in the NCMA’s collection.",
         "Many people judge the painting immediately without taking time to understand the story behind it. In this video you’ll get the background on this work of art and hear about the biblical story that inspired it.",
-        "You’ll also hear from a tour guide at the NCMA and her response to how she thinks the artist has directly addressed in this painting ongoing issues of inequality, power, and oppression."
+        "You’ll also hear from a tour guide at the NCMA and her response to how she thinks the artist has directly addressed ongoing issues of inequality, power, and oppression in this painting."
       ],
       "skip_intro": "Skip intro"
     },
@@ -30,7 +30,7 @@
       "words_remaining": "Words remaining:",
       "chars_remaining": "Characters remaining:",
       "submit": "Submit",
-      "restart_intro": "Restart from intro"
+      "restart_intro": "Restart"
     },
     "form_confirm_modal": {
       "top_text": "This is how your response will be recorded.",
@@ -39,13 +39,13 @@
     },
     "form_submit_modal": {
       "success_top": "Thank you. Your response has been recorded anonymously.",
-      "success_timeout": "The application will reset in",
+      "success_timeout": "The video will reset in",
       "error_top": "There was an error in recording your response. 😕",
       "error_bottom": "Tap anywhere to try again."
     }
   },
   "es": {
-    "is_available": true,
+    "is_available": false,
     "general": {
       "toggle_lang_btn": "English",
       "timeout": {

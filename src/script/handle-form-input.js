@@ -281,7 +281,7 @@ const formInput = {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        "Kehinde Wiley Response": that.formUserInput.kehindeWileyResponse, // key gives name to formspark dashboard key, form data is passed here as value
+        "Kehinde Wiley Response": that.formUserInput.kehinde_response, // key gives name to formspark dashboard key, form data is passed here as value
       }),
     })
       .then(function (response) {
