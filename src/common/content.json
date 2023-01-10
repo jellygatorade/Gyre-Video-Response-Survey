@@ -1,5 +1,5 @@
 {
-  "attract_video_path": "./common/assets/video/AfricanVoices_HomeVideo.mp4",
+  "attract_video_path": "./common/assets/video/wiley-attract-video.mp4",
   "en": {
     "general": {
       "toggle_lang_btn": "Español",
@@ -30,7 +30,7 @@
       "words_remaining": "Words remaining:",
       "chars_remaining": "Characters remaining:",
       "submit": "Submit",
-      "restart_intro": "Restart"
+      "restart_intro": "Restart from intro"
     },
     "form_confirm_modal": {
       "top_text": "This is how your response will be recorded.",

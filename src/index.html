@@ -218,6 +218,13 @@
                     name="kehinde_response"
                     type="text"
                   ></textarea>
+                </form>
+              </div>
+
+              <div
+                class="[ font-CaseTextLight text-base tracking-wide ] py-0 flex flex-row items-start justify-between"
+              >
+                <div>
                   <p
                     id="words-remaining-parent"
                     class="font-CaseTextLight text-base tracking-wide"
@@ -242,21 +249,14 @@
                     >
                     <span id="textarea-chars-remaining"></span>
                   </p>
-                </form>
-              </div>
-
-              <div
-                class="[ font-CaseTextLight text-base tracking-wide] py-[1rem] flex flex-row justify-between"
-              >
-                <button
-                  id="response-form-submit-button"
-                  type="submit"
-                  class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
-                >
-                  <span lang="en" id="en-form-submit">En Submit</span>
-                  <span lang="es" id="es-form-submit">Es Submit</span>
-                </button>
-                <div class="flex flex-row justify-end gap-[0.5rem]">
+                </div>
+                <div class="py-[1rem] flex flex-row justify-end gap-[0.5rem]">
+                  <button
+                    id="form-toggle-lang-button"
+                    class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
+                  >
+                    Español
+                  </button>
                   <button
                     id="form-view-restart-intro-btn"
                     class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
@@ -270,10 +270,12 @@
                     >
                   </button>
                   <button
-                    id="form-toggle-lang-button"
+                    id="response-form-submit-button"
+                    type="submit"
                     class="border border-white rounded-full px-[0.875rem] py-[0.25rem] pt-[0.35rem] tracking-wide hover:border-orange-ncma hover:text-orange-ncma focus:outline focus:outline-1 focus:outline-orange-ncma transition-all duration-300"
                   >
-                    Español
+                    <span lang="en" id="en-form-submit">En Submit</span>
+                    <span lang="es" id="es-form-submit">Es Submit</span>
                   </button>
                 </div>
               </div>
